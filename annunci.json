@@ -1,0 +1,72 @@
+[
+    {
+        "id":1,
+        "name": "iPhone 7",
+        "category": "Normale",
+        "price": "120",
+        "condizioniEstetiche": "come nuovo"
+    },
+    {
+        "id": 2,
+        "name": "iPhone 7 Plus",
+        "category": "Plus",
+        "price": "2000",
+        "condizioniEstetiche": "buone condizioni"
+    },
+    {
+        "id": 3,
+        "name": "iPhone 8",
+        "category": "Normale",
+        "price": "20",
+        "condizioniEstetiche": "ottime condizioni"
+    },
+    {
+        "id": 4,
+        "name": "iPhone 7 Plus",
+        "category": "Plus",
+        "price": "30000",
+        "condizioniEstetiche": "come nuovo"
+    },
+    {
+        "id": 5,
+        "name": "iPhone X",
+        "category": "Normale",
+        "price": "100",
+        "condizioniEstetiche": "come nuovo"
+    },
+    {
+        "id": 6,
+        "name": "Phone 11 Mini",
+        "category": "Mini",
+        "price":"400",
+        "condizioniEstetiche": "ottime condizioni"
+    },
+    {
+        "id": 7,
+        "name": "iPhone 11",
+        "category": "Normale",
+        "price":"300",
+        "condizioniEstetiche": "come nuovo"
+    },
+    {
+        "id": 8,
+        "name": "iPhone 11 Pro",
+        "category": "Pro",
+        "price": "1500",
+        "condizioniEstetiche": "buone condizioni"
+    },
+    {
+        "id": 9,
+        "name": "iPhone 12",
+        "category": "Normale",
+        "price": "230",
+        "condizioniEstetiche": "buone condizioni"
+    },
+    {
+        "id": 10,
+        "name": "iPhone 12 Pro",
+        "category": "Pro",
+        "price": "25000",
+        "condizioniEstetiche": "come nuovo"
+    }
+]

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Animate on scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/acquista.html">
+    <title>PRESTO</title>
+  </head>
+  <body>
+
+    
+ <!-- NAVBAR -->
+ <nav class="navbar navbar-dark" aria-label="First navbar example">
+  <div class="container-fluid">
+    <a href="/index.html" class="navbar-brand"><i><img src="/media/Presto-logos_transparent.png" alt="logo presto" class="logo"></i></a>
+    <a class="nav-link active link-nascosto font-family" aria-current="page" href="/index.html">Home</a>
+    <a class="nav-link active link-nascosto font-family" aria-current="page" href="/acquista.html">Acquista</a>
+    <a class="nav-link active link-nascosto font-family" aria-current="page" href="#">Vendi</a>
+
+    <a href="http://" target="_blank" rel="noopener noreferrer" class="prova"><i class="fa-solid fa-cart-shopping"></i></a>
+    
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample01">
+      <ul class="navbar-nav me-auto mb-2">
+        <li class="nav-item">
+          <a class="nav-link active font" aria-current="page" href="/index.html">Home</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/acquista.html">Acquista</a>
+        </li>
+        <li>
+          <a class="nav-link active" aria-current="page" href="#">Vendi</a>
+
+          <a href="http://" target="_blank" rel="noopener noreferrer" class="prova4"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<!-- END NAVBAR -->
+
+<header class="container-fluid">
+  
+  <div class="col-12 d-flex align-items-center justify-content-center m-auto">
+    <h1 class="font-family my-3 p-5 text-center">Alessandro Di Bartolo</h1>
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center my-5">
+      <div class="circle  d-flex align-items-center justify-content-center">
+        
+        <div class="opener">
+          <i class="fas fa-plus fa-5x text-purple"></i>
+        </div>
+        
+        
+        <div class="moved">
+          <a href="https://it.twitter.com/"><i class="fab fa-twitter fa-4x text-purple"></i></a>
+        </div>
+        <div class="moved">
+          <a href="https://it.facebook.com/"><i class="fab fa-facebook fa-4x text-purple"></i></a>
+        </div>
+        <div class="moved">
+          <a href="https://it.instagram.com/"><i class="fab fa-instagram fa-4x text-purple"></i></a>
+        </div>
+        <div class="moved">
+          <a href="https://it.linkedin.com/"><i class="fab fa-linkedin fa-4x text-purple"></i></a>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+      <img class="immagine-profilo my-5" src="/media/IMG_3793-copia.png" alt="">
+    </div>
+    
+  </div>
+  
+  
+  
+</div>
+</header>
+    
+    
+    
+    
+  
+    
+    
+    
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e68b4c7621.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS -->
+    
+    <script>
+        
+        
+        let opener = document.querySelector('.opener');
+        let movedIcons = document.querySelectorAll('.moved');
+        let confirm = false;
+        let angleWrapper = document.querySelector('#angleWrapper');
+        let angleTitle = document.querySelector('#angleTitle');
+    
+
+
+        opener.addEventListener('click' , ()=>{
+            
+            if(confirm == false){
+                movedIcons.forEach((icona, i) => {
+                
+                let angle = Math.abs((360 * i) / movedIcons.length)
+                
+                icona.style.transform = ` rotate(-${angle}deg)   translate(150px)  rotate(${angle}deg)`
+                icona.setAttribute('data-angle' , angle)
+                
+            })
+            opener.style.transform = 'rotate(45deg)'
+            confirm = true;
+            }else{
+                confirm = false;
+                movedIcons.forEach((icona, i) => {
+                 
+                icona.style.transform = ` rotate(0deg)   translate(0px)  rotate(0deg)`
+                
+                
+            })
+            opener.style.transform = 'rotate(0deg)'
+
+                
+            }
+            
+        })
+
+        movedIcons.forEach((icona, i) => {
+
+
+            icona.addEventListener('click' , ()=>{
+
+                let exp = 360 - Math.abs(+icona.dataset.angle);
+
+                
+                movedIcons.forEach(moved => {
+                    moved.style.transform = `rotate(-${exp + +moved.dataset.angle}deg)   translate(150px)  rotate(${exp + +moved.dataset.angle}deg)`
+                })
+                angleTitle.innerHTML = `${exp}`
+
+
+                let classes = Array.from(icona.children[0].classList);
+                let icon = document.createElement('i');
+                classes.forEach(classe =>{
+                    icon.classList.add(classe)
+                })
+                angleWrapper.innerHTML = '';
+                angleWrapper.appendChild(icon);
+
+            })
+
+
+
+        })
+
+
+        
+    </script>
+
+
+    
+
+    <!-- inizio footer--> 
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>azienda</h4>
+            <ul>
+              <li><a href="#">chi siamo</a></li>
+              <li><a href="#">i nostri servizi</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">contatti</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>assistenza</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">spedizione</a></li>
+              <li><a href="#">resi</a></li>
+              <li><a href="#">stato degli ordini</a></li>
+              <li><a href="#">modalità di pagamento</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>shop online</h4>
+            <ul>
+              <li><a href="#">Iphone</a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">Apple tv</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>seguici</h4>
+            <div class="social-links">
+              <a href="https://it-it.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://it.linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </footer>
+  <!-- fine footer--> 
+
+
+
+
+
+
+
+
+
+   
+
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">  
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    
+
+    <!--Font awesome -->      
+    <script src="https://kit.fontawesome.com/9782d34e3c.js" crossorigin="anonymous"></script>
+
+    <!-- Animate on scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="/main.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="/annunci.json"></script>
+  </body>
+</html>
